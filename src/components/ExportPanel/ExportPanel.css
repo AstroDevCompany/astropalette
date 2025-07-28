@@ -1,0 +1,154 @@
+/* components/ExportPanel/ExportPanel.css */
+.export-panel {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.export-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.export-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.format-select {
+  min-width: 150px;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #e5e5e5;
+  font-size: 0.9rem;
+}
+
+.format-select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.save-form {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.save-input {
+  margin-bottom: 1rem;
+}
+
+.save-input:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.save-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.export-preview {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.export-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+.export-header h4 {
+  color: #e5e5e5;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.export-header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.export-content {
+  padding: 1.5rem;
+  background: #050505;
+  color: #d1d5db;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+    "Courier New", monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.export-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.export-content::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.export-content::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.export-content::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  .export-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .export-controls {
+    justify-content: space-between;
+  }
+
+  .format-select {
+    min-width: auto;
+    flex: 1;
+  }
+
+  .export-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .export-header h4 {
+    font-size: 0.9rem;
+  }
+
+  .export-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .save-actions {
+    flex-direction: column;
+  }
+}
