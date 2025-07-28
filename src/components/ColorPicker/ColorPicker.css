@@ -22,3 +22,9 @@
   margin-top: 0.5rem;
   font-size: 0.95rem;
 }
+
+.macos-warning {
+  color: #f59f0bbd;
+  font-size: 0.95rem;
+  text-align: center;
+}

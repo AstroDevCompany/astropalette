@@ -10,6 +10,7 @@ interface ColorPickerProps {
 const ColorPicker: React.FC<ColorPickerProps> = ({ onPick }) => {
   const [pickedColor, setPickedColor] = useState<Color | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const isMacOS = typeof navigator !== 'undefined' && /Mac/.test(navigator.platform);
 
   const handlePick = async () => {
     setError(null);
@@ -36,12 +37,19 @@ const ColorPicker: React.FC<ColorPickerProps> = ({ onPick }) => {
 
   return (
     <div className="color-picker">
-      <button className="btn btn-secondary" onClick={handlePick}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M19.4 7.34l-2.74-2.74a2.5 2.5 0 0 0-3.54 0l-7.07 7.07a2.5 2.5 0 0 0 0 3.54l2.74 2.74a2.5 2.5 0 0 0 3.54 0l7.07-7.07a2.5 2.5 0 0 0 0-3.54z" />
-        </svg>
-        Pick Color from Screen
-      </button>
+      {!isMacOS && (
+        <button className="btn btn-secondary" onClick={handlePick}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M19.4 7.34l-2.74-2.74a2.5 2.5 0 0 0-3.54 0l-7.07 7.07a2.5 2.5 0 0 0 0 3.54l2.74 2.74a2.5 2.5 0 0 0 3.54 0l7.07-7.07a2.5 2.5 0 0 0 0-3.54z" />
+          </svg>
+          Pick Color from Screen
+        </button>
+      )}
+      {isMacOS && (
+        <div className="macos-warning">
+          <p>On-screen color picker isn't available on macos.</p>
+        </div>
+      )}
       {pickedColor && (
         <div className="picked-color-info">
           <span
