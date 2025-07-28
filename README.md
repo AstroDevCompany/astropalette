@@ -35,3 +35,7 @@ A minimal app, packed with a color picker (on-screen and wheel), color/palette e
 - Wheel color picker
 - Palette and color extraction from images
 - Random palette generation
+
+## Collaborate
+Feel free to collaborate.
+Contact me on [WA](wa.me/393311384552) for info or collaborate on notion.
