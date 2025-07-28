@@ -21,7 +21,6 @@ A minimal app, packed with a color picker (on-screen and wheel), color/palette e
 - IDE: VSCode
 - Langs: Rust, TypeScript, HTML, CSS
 - Frameworks: Tauri V2, React
-- Main extensions: Tailwind
 
 ---
 
